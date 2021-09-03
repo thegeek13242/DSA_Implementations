@@ -108,14 +108,14 @@ int main()
     rem = dequeueFromPriorityHashTable(0);
     printf("Rem val:%d\n", rem->value);
     printf("Rem priority:%d\n", rem->priority);
-    dequeueFromPriorityHashTable(0);
-    dequeueFromPriorityHashTable(0);
-    dequeueFromPriorityHashTable(0);
-    dequeueFromPriorityHashTable(0);
-    dequeueFromPriorityHashTable(0);
-    dequeueFromPriorityHashTable(0);
-    dequeueFromPriorityHashTable(4);
-    dequeueFromPriorityHashTable(0);
+    dequeueFromPriorityHashTable(10);
+    dequeueFromPriorityHashTable(20);
+    dequeueFromPriorityHashTable(30);
+    dequeueFromPriorityHashTable(40);
+    dequeueFromPriorityHashTable(50);
+    dequeueFromPriorityHashTable(60);
+    dequeueFromPriorityHashTable(70);
+    dequeueFromPriorityHashTable(80);
 
     displayPriorityHashTable();
 
