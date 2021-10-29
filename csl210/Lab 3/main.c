@@ -5,47 +5,47 @@
 
 #define SPACE_GAP_LEVEL 5;
 
-void printTree(btNode_t* root, short space)
+void printTree(btNode_t *root, short space)
 {
-    if (root == NULL)
-        return;
-  
-    space += SPACE_GAP_LEVEL;
-  
-    printTree(root->right, space);
-  
-    printf("\n");
-    // for (int i = SPACE_GAP_LEVEL; i < space; i++)
-    //     printf(" ");
-    int i = SPACE_GAP_LEVEL;
-    while(i<space)
-    {
-        printf(" ");
-        i++;
-    }
-    printf("%c, %d\n", root->value, root->frequency);
-  
-    printTree(root->left, space);
+     if (root == NULL)
+          return;
+
+     space += SPACE_GAP_LEVEL;
+
+     printTree(root->right, space);
+
+     printf("\n");
+     // for (int i = SPACE_GAP_LEVEL; i < space; i++)
+     //     printf(" ");
+     int i = SPACE_GAP_LEVEL;
+     while (i < space)
+     {
+          printf(" ");
+          i++;
+     }
+     printf("%c, %d\n", root->value, root->frequency);
+
+     printTree(root->left, space);
 }
 
-void printInorder(btNode_t* node)
+void printInorder(btNode_t *node)
 {
-    if (node == NULL)
-        return;
-    printInorder(node->left);
-    printf("%d->",node->frequency);
-    printInorder(node->right);
+     if (node == NULL)
+          return;
+     printInorder(node->left);
+     printf("%d->", node->frequency);
+     printInorder(node->right);
 }
 
 int main()
 {
-    char input[] = {'a','b','c','d','g','h','i','d','c','b','a','k','g','i','d','a','c','c','r','s','a','b','i','h','r','r','r','d','c','s'};
-    // char input[]="qwertyqqwfrtggggbryyyyyyyeeeeqqqqqqq";
-    // char input[] = "abc";
-    unsigned short sz = 30;
-    btNode_t *root = createHuffmanTree(input, sz);
-    printTree(root, 5);
-    printInorder(root);
+     // char input[] = {'a', 'b', 'c', 'd', 'g', 'h', 'i', 'd', 'c', 'b', 'a', 'k', 'g', 'i', 'd', 'a', 'c', 'c', 'r', 's', 'a', 'b', 'i', 'h', 'r', 'r', 'r', 'd', 'c', 's'};
+     // char input[]="qwertyqqwfrtggggbryyyyyyyeeeeqqqqqqq";
+     // char input[] = "abc";
+     unsigned short sz = 30;
+     btNode_t *root = createHuffmanTree(input, sz);
+     printTree(root, 5);
+     printInorder(root);
 }
 
 //Aviral Verma, BT20CSE214, IIITN
